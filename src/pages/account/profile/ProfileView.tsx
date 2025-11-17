@@ -1,12 +1,12 @@
+import { InfoField } from '@/components/detail-section/sections/dynamic-info';
 import { Avatar, Box, Button, CircularProgress, Grid, Typography } from '@mui/material';
-import { InfoField } from '@/components/detail-section';
 
 // project imports
 import MainCard from '@/components/cards/MainCard';
-import { useGetProfile } from '../hooks/useGetProfile';
-import DynamicInfoSection from '@/components/detail-section';
-import { viewProfileConfig } from './profile.config';
+import DynamicInfoSection from '@/components/detail-section/sections/dynamic-info';
 import { DynamicInfoSectionProps } from '@/components/detail-section/types';
+import { useGetProfile } from '../hooks/useGetProfile';
+import { viewProfileConfig } from './profile.config';
 
 export default function ProfileView({ setEdit }: { setEdit: () => void }) {
   const { profileData: profile, isLoading } = useGetProfile();
